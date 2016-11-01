@@ -1,0 +1,190 @@
+/* Login Form */
+#login-form-container {
+    height: 100%;
+    width: 100%;
+    background-color: #2E2F31;
+}
+#login-form .form-heading {
+    margin: 0px;
+    padding: 20px 20px 0px 20px;
+    text-align: center;
+}
+#login-form .form-heading h1 {
+    color: #FEFEFE;
+    background: -webkit-linear-gradient(#E6E6E6, #A9A9A9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#login-form .form-heading p {
+    display: table;
+    white-space: nowrap;
+}
+#login-form .form-heading p:before,
+#login-form .form-heading p:after {
+    border-top: 1px solid #5F5F5F;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.8em;
+    width: 50%;
+}
+#login-form .form-heading p span {
+    padding: 0px 15px;
+    color: #FEFEFE;
+}
+#login-form input {
+    height: 30px;
+    margin: 0px 0px 3px 0px;
+    padding: 5px;
+    border: 1px solid #CFCFCF;
+    border-radius: 2px;
+    color: #929698;
+    outline: none;
+    -webkit-transition: all 0.45s;
+    -moz-transition: all 0.45s;
+    transition: all 0.45s;
+}
+#login-form input:focus,
+#login-form input:active {
+    border-color: #929698;
+}
+.login-form-controls {
+    text-align: center;
+}
+.login-form-controls button {
+    font-size: 1.1em;
+    padding: 16px 30px;
+    border: none;
+    background-color: #14ACDD;
+    color: #FEFEFE;
+}
+.login-form-controls p {
+    margin-top: 15px;
+    color: #FEFEFE;
+}
+.login-form-controls p a {
+    color: #14ACDD;
+}
+
+/* Signup Form */
+#signup-form-container {
+    height: 100%;
+    width: 100%;
+    background-color: #2E2F31;
+}
+#signup-form {
+    background-color: #FEFEFE;
+}
+#signup-form .form-heading {
+    margin: 0px;
+    padding: 20px;
+    border-bottom: 1px solid #ECECEC;
+    text-align: center;
+}
+#signup-form .form-heading h1 {
+    margin: 0px;
+    font-weight: 300;
+}
+#signup-form .form-heading span {
+    font-size: 0.85em;
+}
+#signup-form .form-heading span a {
+    color: #14ACDD;
+}
+#signup-form .user-input {
+    padding: 30px;
+}
+#signup-form input {
+    height: 30px;
+    margin: 0px 0px 10px 0px;
+    padding: 8px 15px;
+    border: 1px solid #CFCFCF;
+    border-radius: 2px;
+    color: #929698;
+    outline: none;
+    -webkit-transition: all 0.45s;
+    -moz-transition: all 0.45s;
+    transition: all 0.45s;
+}
+#signup-form input[type="text"]:focus,
+#signup-form input[type="text"]:active {
+    border-color: #929698;
+}
+.signup-form-controls {
+    background-color: #EAEAEA;
+    text-align: center;
+}
+.signup-form-controls .policy {
+    font-size: 0.75em;
+    color: #929292;
+}
+.signup-form-controls button {
+    font-size: 1.1em;
+    padding: 16px 30px;
+    border: none;
+    background-color: #14ACDD;
+    color: #FEFEFE;
+}
+
+/* Initialize Form */
+#initialize-form-container {
+    height: 100%;
+    width: 100%;
+    background-color: #2E2F31;
+}
+#initialize-form {
+    background-color: #FEFEFE;
+}
+#initialize-form .form-heading {
+    margin: 0px;
+    padding: 20px;
+    border-bottom: 1px solid #ECECEC;
+    text-align: left;
+}
+#initialize-form .form-heading h1 {
+    margin: 0px;
+    font-weight: 300;
+}
+#initialize-form .form-heading span {
+    font-size: 0.85em;
+}
+#initialize-form .form-heading span a {
+    color: #14ACDD;
+}
+#initialize-form .user-input {
+    padding: 15px;
+}
+#initialize-form .user-input div {
+    padding: 0px 10px 5px 10px;
+}
+#initialize-form input {
+    height: 30px;
+    margin: 0px 0px 10px 0px;
+    padding: 8px 15px;
+    border: 1px solid #CFCFCF;
+    border-radius: 2px;
+    color: #929698;
+    outline: none;
+    -webkit-transition: all 0.45s;
+    -moz-transition: all 0.45s;
+    transition: all 0.45s;
+}
+#initialize-form input[type="text"]:focus,
+#initialize-form input[type="text"]:active {
+    border-color: #929698;
+}
+.initialize-form-controls {
+    background-color: #EAEAEA;
+    text-align: center;
+}
+.initialize-form-controls .policy {
+    font-size: 0.75em;
+    color: #929292;
+}
+.initialize-form-controls button {
+    font-size: 1.1em;
+    padding: 16px 30px;
+    border: none;
+    background-color: #14ACDD;
+    color: #FEFEFE;
+}

@@ -1,0 +1,25 @@
+<div id="login-form-container" layout="row" layout-align="center center">
+    <form id="login-form" 
+          layout="column" 
+          flex="90"
+          flex-gt-sm="40"
+          flex-gt-md="30" 
+          ng-submit="login(user)">
+        <div class="form-heading">
+            <h1>ControlTower</h1>
+            <p><span>Sign In</span></p>
+        </div>
+        <div class="user-input" layout="column" layout-padding>
+            <div layout="column">
+                <input type="email" placeholder="Email Address" ng-model="user.username" required autofocus>
+                <input type="password" placeholder="Password" ng-model="user.password" required>
+            </div>
+        </div>
+        <div class="login-form-controls" layout="column" layout-padding>
+            <div layout="column">
+                <button type="submit" class="form-submit">Login</button>
+                <p>Don't have an account? <a ui-sref="^.signup">Sign Up</a></p>
+            </div>
+        </div>
+    </form>
+</div>

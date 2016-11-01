@@ -1,0 +1,13 @@
+<section layout="row" class="module-text {{Module.style.background_color}}" style="font-family: {{Module.style.font_family}}">
+
+	<div layout="column" layout-gt-sm="row" flex="90" flex-offset="5" class="module-text-columns">
+		<div flex
+			 layout="column"
+			 class="module-text-columns-single {{Module.style.text_align}}"
+			 ng-repeat="column in Module.data.columns"
+			 ng-if="column.visibility">
+			<h3>{{ column.title }}</h3>
+			<p>{{ column.paragraph }}</p>
+		</div>
+	</div>
+</section>

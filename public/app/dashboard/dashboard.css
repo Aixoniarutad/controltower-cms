@@ -1,0 +1,72 @@
+/*Sidebar*/
+#menu-left {
+    position: fixed;
+    height: 100%;
+    width: 80px;
+    background-color: #1C1C1C;
+}
+#menu-left .brand {
+    height: 64px;
+    cursor: pointer;
+    outline: none;
+}
+#menu-left .brand md-icon {
+    color: #39D5E1;
+}
+#menu-left .activity {
+    height: 64px;
+    display: flex;
+    border-bottom: 1px solid #424242;
+    outline: none;
+}
+#menu-left .activity a {
+    width: 100%;
+    display: flex;
+    padding: 10px 0px;
+    font-size: 12px;
+    text-align: center;
+    color: #A7A7A7;
+    cursor: pointer;
+}
+#menu-left .activity md-icon {
+    color: #A7A7A7;
+}
+#menu-left .activity a:hover,
+#menu-left .activity a:hover md-icon {
+    color: #F7F7F7;
+    -webkit-transition: all 0.45s;
+    -moz-transition: all 0.45s;
+    transition: all 0.45s;
+}
+#menu-left .activity.current {
+    background-color: #3E4649;
+}
+#menu-left .activity.current {
+    color: #39D5E1 !important;
+}
+#menu-left .activity.current md-icon {
+    color: #39D5E1;
+}
+
+/*View*/
+#view {
+    background: #A7A7A7;
+}
+#view-dashboard {
+    height: 100%;
+    overflow: auto;
+    margin-left: 80px;
+    background: rgba(0, 0, 0, 0.12);
+}
+#view-toolbar {
+    position: fixed;
+    z-index: 10;
+    width: calc(100% - 80px);
+}
+#view-toolbar md-toolbar {
+    min-height: 64px;
+    max-height: 64px;
+}
+#view-content {
+    margin-top: 64px;
+}

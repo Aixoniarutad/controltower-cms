@@ -1,0 +1,20 @@
+.module-splash {
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.module-splash-content {
+    padding-top: 50px;
+    padding-right: 30px;
+}
+.module-splash-title {
+    font-size: 35px;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+.module-splash-subtitle {
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}

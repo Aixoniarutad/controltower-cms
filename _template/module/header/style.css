@@ -1,0 +1,9 @@
+.module-header {
+	min-height: 80px;
+	max-height: 80px;
+}
+.module-header .logo {
+	max-height: 64px;
+    width: initial;
+    margin: 10px 0px;
+}

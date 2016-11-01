@@ -1,0 +1,22 @@
+<section layout="row" class="module-header {{Module.style.background_color}}">
+    <div layout-wrap layout="row" flex="90" flex-offset="5">
+        <div layout="row">
+            <div layout="row" layout-align="center center">
+                <md-button hide-gt-xs class="md-primary md-icon-button" aria-label="Menu">
+                    <md-icon>menu</md-icon>
+                </md-button>
+            </div>
+            <div layout="row" layout-align="center center">
+                    <img class="logo"
+                    ng-src="{{Module.data.logo}}"
+                    alt="{{Application.title}}">
+            </div>
+        </div>
+        <span flex></span>
+        <nav hide-xs layout="row" layout-align="end end">
+            <a ng-repeat="page in Application.pages" ng-click="previewPage(page)">
+                <md-button>{{page.meta.title}}</md-button>
+            </a>
+        </nav>
+    </div>
+</section>

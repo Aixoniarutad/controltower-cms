@@ -1,0 +1,44 @@
+<div class="module-options">
+	<md-tabs md-dynamic-height>
+		<!-- Color -->
+		<md-tab>
+			<md-tab-label>
+				<md-icon>color_lens</md-icon>
+			</md-tab-label>
+			<md-tab-body>
+				<div layout="column">
+					<span class="option-title">Color</span>
+					<div layout="row">
+						<div layout="column" ng-repeat="color in Template.colors" ng-cloak>
+							<md-button aria-label="color.primary" ng-click="Module.style.background_color= color.primary" class="md-fab md-raised md-mini" ng-class="color.primary">
+								<md-icon></md-icon>
+							</md-button>
+							<md-button aria-label="color.dark" ng-click="Module.style.background_color= color.dark" class="md-fab md-raised md-mini" ng-class="color.dark">
+								<md-icon></md-icon>
+							</md-button>
+							<md-button aria-label="color.accent" ng-click="Module.style.background_color= color.accent" class="md-fab md-raised md-mini" ng-class="color.accent">
+								<md-icon></md-icon>
+							</md-button>
+						</div>
+					</div>
+				</div>
+			</md-tab-body>
+		</md-tab>
+		<!-- Copyright -->
+		<md-tab>
+			<md-tab-label>
+				<md-icon>copyright</md-icon>
+			</md-tab-label>
+			<md-tab-body>
+				<md-content layout-gt-sm="row" layout-padding>
+					<div>
+					  <md-input-container>
+						<label>Copyright</label>
+						<input ng-model="Module.data.copyright" type="text">
+					  </md-input-container>
+					</div>
+				</md-content>
+			</md-tab-body>
+		</md-tab>
+	</md-tabs>
+</div>

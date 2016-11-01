@@ -1,0 +1,103 @@
+<!-- View Toolbar -->
+<section id="view-toolbar">
+    <md-toolbar ng-hide="options.rowSelection && selected.length">
+        <div class="md-toolbar-tools">
+            <h2>Media Gallery</h2>
+            <span flex></span>
+            <md-button class="md-accent" 
+                ngf-select="uploadMedia($files, $invalidFiles)"
+                ngf-multiple="true"
+                ngf-pattern="'image/*'"
+                ngf-max-total-size="30MB"
+                ngf-max-size="10MB"
+                type="file">
+                <md-icon>file_upload</md-icon>
+                <span>Upload</span>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-toolbar class="md-accent" ng-show="options.rowSelection && selected.length">
+        <div class="md-toolbar-tools">
+            <span>{{selected.length}} {{selected.length > 1 ? 'items' : 'item'}} selected</span>
+            <div flex></div>
+            <md-button class="md-primary md-icon-button" ng-click="deleteMedia($event, selected)">
+                <md-icon>delete</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+</section>
+
+<!-- View -->
+<section id="view-content">
+    <md-content layout="column" flex>
+        <md-table-container>
+            <table md-table md-row-select="options.rowSelection" multiple="{{options.multiSelect}}" ng-model="selected" md-progress="promise">
+            <thead ng-if="!options.decapitate" md-head md-order="query.order" md-on-reorder="logOrder">
+                <tr md-row>
+                    <th md-column><span>Image</span></th>
+                    <th md-column md-order-by="name"><span>Name</span></th>
+                    <th md-column md-numeric></th>
+                    <th md-column md-numeric></th>
+                    <th md-column md-numeric></th>
+                    <th md-column md-numeric></th>
+                    <th md-column md-numeric></th>
+                    <th md-column md-numeric></th>
+                    <th md-column md-numeric></th>
+                    <th md-column md-order-by="type"><span>Type</span></th>
+                    <th md-column md-order-by="size"><span>Size</span></th>
+                </tr>
+            </thead>
+            <tbody md-body>
+                <tr md-row 
+                	md-select="media" 
+                	md-on-select="logItem" 
+                	md-auto-select="options.autoSelect" 
+                	ng-repeat="media in Media | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
+                    <td flex md-cell style="height: 85px;width: 200px;">
+                        <div class="lazy-background">
+                            <img style="max-height: 85px;max-width: 100%;" lazy-src ng-src="{{media.publicUrl}}"/>   
+                        </div>
+                    </td>
+                    <td md-cell>{{media.name}}</td>
+                    <td md-cell></td>
+                    <td md-cell></td>
+                    <td md-cell></td>
+                    <td md-cell></td>
+                    <td md-cell></td>
+                    <td md-cell></td>
+                    <td md-cell></td>
+                    <td md-cell>{{media.type}}</td>
+                    <td md-cell>{{media.size | bytes}}</td>
+                </tr>
+            </tbody>
+          </table>
+        </md-table-container>
+        <!-- Pagination -->
+        <md-table-pagination 
+            md-limit="query.limit" 
+            md-limit-options="limitOptions" 
+            md-page="query.page" 
+            md-total="{{Media.length}}" 
+            md-page-select="options.pageSelect" 
+            md-boundary-links="options.boundaryLinks" 
+            md-on-paginate="logPagination">
+        </md-table-pagination>
+    </md-content>
+</section>
+
+<div id="media-status" class="md-whiteframe-5dp" ng-show="fileQueue">
+    <md-list>
+        <div layout="row">
+            <span class="md-caption" layout-padding>Uploading {{fileQueueCompleted}} of {{fileQueue.length}}</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-show="fileQueueCompleted==fileQueue.length" ng-click="fileQueue=false"><md-icon>close</md-icon></md-button>
+        </div>
+        <md-list-item ng-repeat="file in fileQueue">
+            <p class="layout-padding">{{ file.name }} {{ file.$errorParam }} </p>
+            <md-icon aria-label="Success" ng-show="file.status==1" class="green-text">check</md-icon>
+            <md-icon aria-label="Failure" ng-show="file.status==0" class="red-text">error</md-icon>
+            <md-progress-linear class="md-accent" md-mode="indeterminate" ng-show="!file.status"></md-progress-linear>
+        </md-list-item>
+    </md-list>
+</div>
+

@@ -1,0 +1,31 @@
+<!-- View Toolbar -->
+<section id="view-toolbar">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <div layout="column">
+                <h2>{{Application.meta.title}}</h2>
+                <div class="md-caption">
+                    <span>{{Preview.filename}}</span>
+                </div>
+            </div>
+            <span flex></span>
+            <md-button class="md-accent" ng-if="User.config.ROLE==='administrator'" ng-click="download($event, Application)">
+                <md-icon>cloud_download</md-icon>
+                <span>Zip</span>
+            </md-button>
+            <md-button class="md-accent" ui-sref="^.meta">
+                <md-icon>info</md-icon>
+                <span>App Info</span>
+            </md-button>
+        </div>
+    </md-toolbar>
+</section>
+
+<!-- View -->
+<section id="view-content" layout="row" layout-margin>
+    <div id="application-viewport" class="md-whiteframe-24dp">
+        <div ng-repeat="Module in Preview.modules | orderBy: 'order'">
+            <div ng-inline template="_template/module/{{Module.type}}/template.html"></div>
+        </div>
+    </div>
+</section>

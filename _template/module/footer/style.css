@@ -1,0 +1,18 @@
+.module-footer {
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.50);
+}
+.module-footer-content {
+	padding: 20px 0px;
+}
+.module-footer-links {
+    margin: 20px 0px;
+}
+.module-footer-links a {
+    margin: 0px 15px 10px 0px;
+}
+.module-footer-social a img {
+    padding-right: 10px;
+}
+.module-footer-copyright {
+
+}

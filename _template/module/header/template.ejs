@@ -1,0 +1,22 @@
+<section class="<%= Module.style.background_color %>">
+    <div layout-wrap layout="column" layout-gt-xs="row" flex="90" flex-offset="5">
+        <div layout="row">
+            <div layout="row" layout-align="center center">
+                <md-button hide-gt-xs class="md-icon-button" aria-label="Menu">
+                    <md-icon>menu</md-icon>
+                </md-button>
+            </div>
+            <div>
+               <img ng-src="<%= Module.data.logo %>"
+                    alt="<%= Application.title %>"
+                    style="max-height:64px;width:initial;margin: 10px 0px;"> 
+            </div>
+        </div>
+        <span flex></span>
+        <nav hide-xs layout="row" layout-align="end end">
+            <% Application.pages.forEach(function(page){ %>
+                <a md-button href="<%= page.filename %>"><%= page.meta.title %></a>
+            <% }); %>
+        </nav>
+    </div>
+</section>

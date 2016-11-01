@@ -1,0 +1,38 @@
+.module-contact {
+	padding: 20px 0px;
+}
+.module-contact iframe.map {
+	min-height: 400px;
+	min-width: 100%;
+	margin: 10px;
+}
+.module-contact input {
+	height: 30px;
+	margin: 0px 0px 20px 0px;
+	padding: 5px;
+	border: 1px solid #CFCFCF;
+	border-radius: 2px;
+	color: #929698;
+	outline: none;
+	-webkit-transition: all 0.45s;
+	-moz-transition: all 0.45s;
+	transition: all 0.45s;
+}
+.module-contact textarea {
+	height: 60px;
+	margin: 0px 0px 20px 0px;
+	padding: 5px;
+	border: 1px solid #CFCFCF;
+	border-radius: 2px;
+	color: #929698;
+	outline: none;
+	-webkit-transition: all 0.45s;
+	-moz-transition: all 0.45s;
+	transition: all 0.45s;
+}
+.module-contact input:focus,
+.module-contact input:active,
+.module-contact textarea:focus,
+.module-contact textarea:active {
+	border-color: #929698;
+}

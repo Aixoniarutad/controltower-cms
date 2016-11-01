@@ -1,0 +1,61 @@
+<!-- View Toolbar -->
+<section id="view-toolbar">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>My Pages</h2>
+            <span flex></span>
+            <md-button class="md-accent" ng-click="newPage($event)">
+                <md-icon>add</md-icon>
+                <span>Add Page</span>
+            </md-button>
+        </div>
+    </md-toolbar>
+</section>
+
+<!-- View -->
+<section id="view-content" layout="row" layout-wrap>
+    <md-card class="page-card" ng-repeat="Page in Pages">
+        <div layout="row">
+            <div class="header" layout="column">
+                <span class="title">{{Page.meta.title}}</span>
+                <span class="subtitle">{{Page.filename}}</span>
+            </div>
+            <span flex></span>
+            <div layout="row" layout-align="center center">
+                <md-menu>
+                    <md-button aria-label="Settings" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                        <md-icon md-menu-origin>more_vert</md-icon>
+                    </md-button>
+                    <md-menu-content width="2">
+                        <md-menu-item>
+                            <md-button ng-click="updateMeta($event, Page)">
+                                <md-icon md-menu-align-target>description</md-icon>
+                                <span>Description</span>
+                            </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button ng-click="deletePage($event, Page)">
+                                <md-icon>delete</md-icon>
+                                <span>Delete</span>
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="frame-wrap">
+                <div class="frame-preview">
+                    <div ng-repeat="Module in Page.modules | orderBy: 'order'">
+                        <div ng-inline template="_template/module/{{Module.type}}/template.html"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button ui-sref="^.edit({id: Page._id})">
+                <span>Edit Page</span>
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</section>

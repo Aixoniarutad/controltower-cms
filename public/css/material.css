@@ -1,0 +1,47 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+ui-view {
+    height: 100%;
+    width: 100%;
+}
+.md-icon {
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* <button></button> */
+.md-button {
+    text-transform: none;
+}
+.md-button.md-danger {
+  background-color: #F44336;
+  color: rgba(255,255,255,0.87);
+}
+.md-button.md-danger:not([disabled]):hover {
+  background-color: rgba(244, 67, 54, 0.85);
+}
+.md-button.md-danger[disabled] {
+  color : rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+
+/* <dialog></dialog> */
+.md-dialog-backdrop.md-opaque {
+  opacity: .85;
+  background-color: rgb(0, 0, 0);
+}
+
+/* <toast></toast> */
+md-toast.md-success-toast-theme .md-toast-content {
+    background-color: #4CAF50;
+}
+md-toast.md-error-toast-theme .md-toast-content {
+    background-color: #F44336;
+}
+
+/* <md-tabs></md-tabs> */
+md-tab-content {
+    background: rgba(189, 189, 189, 0.63);
+}

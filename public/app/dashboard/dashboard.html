@@ -1,0 +1,41 @@
+<!-- Toolbar -->
+<div id="menu-left" class="md-whiteframe-3dp" layout="column">
+	<div class="brand" layout="row" layout-align="center center" ng-click="tutorial($event)">
+		<brand-loader></brand-loader>
+	</div>
+	<div class="activity" ui-sref-active="current">
+		<a ui-sref=".application.preview" layout="column">
+			<md-icon>web</md-icon>
+			<span>Website</span>
+		</a>
+	</div>
+	<div class="activity" ui-sref-active="current">
+		<a ui-sref=".pages.list" layout="column">
+			<md-icon>pages</md-icon>
+			<span>Pages</span>
+		</a>
+	</div>
+	<div class="activity" ui-sref-active="current">
+		<a ui-sref=".users" layout="column">
+			<md-icon>account_box</md-icon>
+			<span>Users</span>
+		</a>
+	</div>
+	<div class="activity" ui-sref-active="current">
+		<a ui-sref=".media" layout="column">
+			<md-icon>perm_media</md-icon>
+			<span>Gallery</span>
+		</a>
+	</div>
+	<span flex></span>
+	<div class="activity">
+		<a ng-click="logout()">
+			<md-icon>exit_to_app</md-icon>
+		</a>
+	</div>
+</div>
+
+<!-- Dashboard View -->
+<div id="view-dashboard" flex ui-view>
+        	
+</div>

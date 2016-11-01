@@ -1,0 +1,38 @@
+md-tabs-canvas {
+    background: #ECECEC;
+}
+#media-gallery {
+
+}
+.media-pagination {
+	list-style: none;
+}
+.media-pagination li {
+	list-style: none;
+	height: 50px;
+	width: 50px;
+}
+.media-image .wrapper {
+	background-color: #ADADAD;
+	height: 200px;
+	overflow: hidden;
+}
+.media-image img {
+	height: 100%;
+	width: initial;
+}
+.lazy-background {
+	height: 100%;
+    width: 150px;
+}
+
+#media-status {
+    position: fixed;
+    height: 200px;
+    width: 400px;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 5px;
+    overflow-y: scroll;
+}

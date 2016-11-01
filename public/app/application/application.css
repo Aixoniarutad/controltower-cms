@@ -1,0 +1,33 @@
+/*Preview*/
+#application-viewport {
+	width: 100%;
+	overflow: auto;
+	-moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#application-viewport.phone {
+	height: 568px;
+	width: 320px;
+}
+#application-viewport.tablet {
+	height: 1024px;
+	width: 768px;
+}
+#application-viewport.desktop {
+	height: 100%;
+	width: 100%;
+}
+
+/*Meta*/
+#application-meta-information {
+
+}
+/*Social*/
+#application-meta-social input {
+    border: 1px solid #D4D4D4;
+    border-left: none;
+    border-radius: 0px 3px 3px 0px;
+    padding: 0px 0px 0px 8px;
+}

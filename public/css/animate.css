@@ -1,0 +1,21 @@
+.editPulse {
+  -webkit-animation: pulseEdit 0.5s infinite alternate;
+  -moz-animation: pulseEdit 0.5s infinite alternate;
+  animation: pulseEdit 0.5s infinite alternate;
+}
+.editText {
+  -webkit-animation: pulseText 0.5s infinite alternate;
+  -moz-animation: pulseText 0.5s infinite alternate;
+  animation: pulseText 0.5s infinite alternate;
+}
+
+@-webkit-keyframes pulseEdit {
+  from { text-shadow: 0 0 1px #7D7D7D;}
+  50% { text-shadow: 0 0 5px #525252;}
+  to { text-shadow: 0 0 10px #353535;}
+}
+@-webkit-keyframes pulseText {
+	to { 
+		transform: scale(1.05); 
+	}
+}

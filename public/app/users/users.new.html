@@ -1,0 +1,32 @@
+<md-dialog aria-label="New User">
+  	<form width="500px" ng-submit="createUser(new_user)">
+	    <md-toolbar>
+	      	<div class="md-toolbar-tools">
+	        	<h2>New user</h2>
+	        	<span flex></span>
+	        	<md-button class="md-icon-button" ng-click="cancel()">
+	          		<md-icon aria-label="Close dialog">close</md-icon>
+	        	</md-button>
+	      	</div>
+	    </md-toolbar>
+
+	    <md-dialog-content style="max-width:800px; max-height:810px; min-width:500px">
+            <md-content class="md-padding">
+				<md-input-container class="md-block">
+			        <label>Email</label>
+			        <input md-maxlength="40" required md-no-asterisk type="email" name="username" ng-model="new_user.username">
+		      	</md-input-container>
+		      	<md-input-container class="md-block">
+			        <label>Password</label>
+			        <input md-maxlength="40" required md-no-asterisk type="password" name="password" ng-model="new_user.password">
+		      	</md-input-container>
+            </md-content>
+	    </md-dialog-content>
+
+	    <!-- Actions -->
+	    <md-dialog-actions layout="row">
+	      	<md-button ng-click="cancel()">Go Back</md-button>
+	      	<md-button autofocus type="submit">Confirm</md-button>
+	    </md-dialog-actions>
+  	</form>
+</md-dialog>

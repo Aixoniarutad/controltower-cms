@@ -1,0 +1,115 @@
+<div class="module-options">
+    <md-tabs md-dynamic-height>
+        <!-- Color -->
+        <md-tab>
+            <md-tab-label>
+                <md-icon>color_lens</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+                <div layout="column">
+                    <span class="option-title">Color</span>
+                    <div layout="row">
+                        <div layout="column" ng-repeat="color in Template.colors" ng-cloak>
+                            <md-button aria-label="color.primary" ng-click="Module.style.background_color= color.primary" class="md-fab md-raised md-mini" ng-class="color.primary">
+                                <md-icon></md-icon>
+                            </md-button>
+                            <md-button aria-label="color.dark" ng-click="Module.style.background_color= color.dark" class="md-fab md-raised md-mini" ng-class="color.dark">
+                                <md-icon></md-icon>
+                            </md-button>
+                            <md-button aria-label="color.accent" ng-click="Module.style.background_color= color.accent" class="md-fab md-raised md-mini" ng-class="color.accent">
+                                <md-icon></md-icon>
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+            </md-tab-body>
+        </md-tab>
+        <!-- Text Alignment -->
+        <md-tab>
+            <md-tab-label>
+                <md-icon>format_align_center</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+                <div layout="column">
+                    <span class="option-title">Text Alignment</span>
+                    <div layout="row">
+                        <div ng-repeat="layout in Template.text_align">
+                            <md-button ng-click="Module.style.text_align = layout.alignment" class="md-fab md-raised md-mini">
+                                <md-icon ng-class="'md-light'">{{layout.icon}}</md-icon>
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+            </md-tab-body>
+        </md-tab>
+        <!-- Font Family -->
+        <md-tab>
+            <md-tab-label>
+                <md-icon>font_download</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+                <div layout="column">
+                    <span class="option-title">Font</span>
+                    <div layout="row">
+                        <div ng-repeat="font in Template.fonts">
+                            <md-button ng-click="Module.style.font_family = font.font_family" class="md-raised" style="font-family: {{font.font_family}}">
+                                <span>{{font.font_family}}</span>
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+            </md-tab-body>
+        </md-tab>
+        <!-- Columns -->
+        <md-tab>
+            <md-tab-label>
+                <md-icon>view_column</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+                <div layout="column">
+                    <span class="option-title">Text Content</span>
+                    <div layout="row">
+                        <div flex
+                             layout="column"
+                             layout-align="start center"
+                             ng-repeat="column in Module.data.columns"
+                             style="margin: 0px 20px; text-align: {{Module.style.text_align}}">
+    
+                            <md-card>
+                                <md-card-header style="background: #252526; color: white; padding: 0px;">
+                                    <span flex></span>
+                                    <md-button class="md-icon-button" aria-label="Visibility" ng-click="column.visibility=!column.visibility">
+                                        <md-icon style="color: white;" ng-show="column.visibility">visibility</md-icon>
+                                        <md-icon style="color: white;" ng-show="!column.visibility">visibility_off</md-icon>
+                                    </md-button>
+                                </md-card-header>
+                                <!-- Title -->
+                                <div style="padding:10px">
+                                    <md-input-container class="md-block">
+                                        <label>Title</label>
+                                        <input ng-disabled="!column.visibility" md-maxlength="30" ng-model="column.title" />
+                                        <div ng-messages="projectForm.description.$error">
+                                          <div ng-message="required">This is required.</div>
+                                          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                                <!-- Paragraph -->
+                                <div style="padding:10px">
+                                    <md-input-container class="md-block">
+                                        <label>Paragraph</label>
+                                        <textarea ng-disabled="!column.visibility" md-maxlength="250" ng-model="column.paragraph"></textarea>
+                                        <div ng-messages="projectForm.description.$error">
+                                          <div ng-message="required">This is required.</div>
+                                          <div ng-message="md-maxlength">The name has to be less than 250 characters long.</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                            </md-card>
+                        </div>
+                    </div>
+                </div>
+            </md-tab-body>
+        </md-tab>
+    </md-tabs>
+</div>

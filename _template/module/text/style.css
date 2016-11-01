@@ -1,0 +1,10 @@
+.module-text {
+
+}
+.module-text-columns {
+	min-height: 250px; 
+	padding: 20px 0px;
+}
+.module-text-columns-single {
+	margin-right: 20px;
+}

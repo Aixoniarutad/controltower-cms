@@ -1,0 +1,13 @@
+md-toast.md-tutorial-toast-theme {
+	margin-left: 80px;
+	-webkit-animation: bounce 0.7s infinite;
+}
+md-toast.md-tutorial-toast-theme span {
+	color: #39D5E1;
+}
+@-webkit-keyframes bounce {
+  0%       { left:3px; }
+  25%, 75% { left:6px; }
+  50%      { left:9px; }
+  100%     { left:0;}
+}

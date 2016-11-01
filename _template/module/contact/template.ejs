@@ -1,0 +1,36 @@
+<section layout="column" layout-gt-sm="row" class="module-contact <%= Module.style.background_color %>">
+	<!-- Form Input -->
+	<div layout="column" flex="40" flex-offset="5">
+		<div>
+			<h2><%= Module.data.title %></h2>
+		</div>
+		<div layout="column">
+			<div layout="column">
+				<input type="text" placeholder="Name" required>
+			</div>
+		</div>
+		<div layout="column">
+			<div layout="column">
+				<input type="text" placeholder="Email" required>
+			</div>
+		</div>
+		<div layout="column">
+			<div layout="column">
+				<input type="text" placeholder="Subject" required>
+			</div>
+		</div>
+		<div layout="column">
+			<div layout="column">
+				<textarea placeholder="Message"></textarea>
+			</div>
+		</div>
+		<div layout="row">
+			<md-button class="md-primary md-raised">Submit</md-button>
+		</div>
+	</div>
+	<!-- Google Map -->
+	<div layout="column" flex="40" flex-offset="5">
+		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.4689233371632!2d-81.4218453845797!3d41.21155057928078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883123fb31f463af%3A0xd64ac0ca4280579a!2s2180+Barlow+Rd%2C+Hudson%2C+OH+44236!5e0!3m2!1sen!2sus!4v1459529635347"
+		frameborder="0"></iframe>
+	</div>
+</section>

@@ -1,0 +1,117 @@
+<!-- View Toolbar -->
+<section id="view-toolbar">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<md-button class="md-accent md-icon-button" ui-sref="^.preview">
+				<md-icon>arrow_back</md-icon>
+			</md-button>
+			<h2>{{Application.meta.title}}</h2>
+			<span flex></span>
+		</div>
+	</md-toolbar>
+</section>
+
+<!-- View -->
+<section id="view-content" layout="column" layout-gt-sm="row" layout-wrap>
+  	<!-- Information -->
+  	<div flex="60" style="margin:20px;">
+  		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>Information</h2>
+				<span flex></span>
+				<md-button class="md-accent" ng-click="update($event, Application)">
+					<md-icon>save</md-icon>
+					<span>Save</span>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<md-content class="md-padding">
+			<div layout-gt-sm="row">
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Business Name</label>
+					<input ng-model="Application.meta.title">
+				</md-input-container>
+			</div>
+			<div layout-gt-sm="row">
+				<md-input-container class="md-block" flex-gt-sm>
+				  	<label>Business Description</label>
+				  	<textarea ng-model="Application.meta.description" columns="1" md-maxlength="150" rows="5"></textarea>
+				</md-input-container>
+			</div>
+			<div layout-gt-sm="row">
+			  	<md-input-container class="md-block" flex-gt-sm>
+					<label>Email</label>
+					<input ng-model="Application.meta.email">
+			  	</md-input-container>
+			  	<md-input-container class="md-block" flex-gt-sm>
+					<label>Phone</label>
+					<input ng-model="Application.meta.telephone">
+			  	</md-input-container>
+			</div>
+			<md-input-container class="md-block">
+			  	<label>Address</label>
+			  	<input ng-model="Application.meta.address">
+			</md-input-container>
+			<div layout-gt-sm="row">
+			  	<md-input-container class="md-block" flex-gt-sm>
+					<label>City</label>
+					<input ng-model="Application.meta.city">
+			  	</md-input-container>
+			  	<md-input-container flex-gt-sm>
+					<label>State</label>
+					<md-select ng-model="Application.meta.state">
+				  		<md-option ng-repeat="state in Template.states" value="{{state.abbreviation}}">{{state.name}}</md-option>
+					</md-select>
+			  	</md-input-container>
+			  	<md-input-container class="md-block" flex-gt-sm>
+					<label>Postal Code</label>
+					<input ng-model="Application.meta.zipcode" md-maxlength="5">
+			  	</md-input-container>
+			</div>
+		</md-content>
+  	</div>
+
+
+  	<div layout="column" flex="30" style="margin:20px;">
+  		<!-- Social Media -->
+  		<div id="application-meta-social" style="margin-bottom:10px;">
+  			<md-toolbar>
+				<div class="md-toolbar-tools">
+					<h2>Social Media</h2>
+					<span flex></span>
+					<md-button class="md-accent" ng-click="update($event, Application)">
+						<md-icon>save</md-icon>
+						<span>Save</span>
+					</md-button>
+				</div>
+			</md-toolbar>
+			<md-content layout="column" layout-padding>
+				<div layout="row" ng-repeat="social in Application.meta.social">
+					<img ng-src="{{social.icon}}" alt="{{social.type}}">
+					<input flex="100" type="text" ng-model="social.src">
+				</div>
+			</md-content>
+  		</div>
+  		<!-- Actions -->
+	  	<md-content layout="column" style="margin-bottom:10px;">
+	  		<md-toolbar>
+				<div class="md-toolbar-tools">
+					<h2>Options</h2>
+					<span flex></span>
+					<code class="md-caption">App ID: {{Application._id}}</code>
+				</div>
+			</md-toolbar>
+			<div layout="column">
+				<div layout="column" layout-padding>
+					<input ng-model="confirm_delete" type="text" placeholder="Application ID">
+				</div>
+				<div layout="row">
+					<span flex></span>
+					<md-button class="md-raised md-danger" ng-disabled="confirm_delete!==Application._id" ng-click="delete($event, Application)">
+						<span>Delete Application</span>
+					</md-button>
+				</div>
+			</div>
+	  	</md-content>
+  	</div>
+</section>

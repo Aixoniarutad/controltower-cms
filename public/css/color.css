@@ -1,0 +1,148 @@
+/*Red*/
+.red {
+	background-color: #F44336 !important;
+	color: white;
+}
+.red-dark {
+	background-color: #D32F2F !important;
+	color: white;
+}
+.red-accent {
+	background-color: #FF5722 !important;
+	color: white;
+}
+.red-text {
+	color: #FF5722 !important;
+}
+
+/*Pink*/
+.pink {
+	background-color: #E91E63 !important;
+	color: white;
+}
+.pink-dark {
+	background-color: #C2185B !important;
+	color: white;
+}
+.pink-accent {
+	background-color: #D84778 !important;
+	color: white;
+}
+
+/*Purple*/
+.purple {
+	background-color: #9C27B0 !important;
+	color: white;
+}
+.purple-dark {
+	background-color: #7B1FA2 !important;
+	color: white;
+}
+.purple-accent {
+	background-color: #E040FB !important;
+	color: white;
+}
+
+/*Indigo*/
+.indigo {
+	background-color: #3F51B5 !important;
+	color: white;
+}
+.indigo-dark {
+	background-color: #303F9F !important;
+	color: white;
+}
+.indigo-accent {
+	background-color: #7C4DFF !important;
+	color: white;
+}
+
+/*Blue*/
+.blue {
+	background-color: #2196F3 !important;
+	color: white;
+}
+.blue-dark {
+	background-color: #1976D2 !important;
+	color: white;
+}
+.blue-accent {
+	background-color: #448AFF !important;
+	color: white;
+}
+
+/*Green*/
+.green {
+	background-color: #4CAF50 !important;
+	color: white;
+}
+.green-dark {
+	background-color: #388E3C !important;
+	color: white;
+}
+.green-accent {
+	background-color: #4CAF50 !important;
+	color: white;
+}
+.green-text {
+	color: #4CAF50 !important;
+}
+
+/*Orange*/
+.orange {
+	background-color: #FF9800 !important;
+	color: white;
+}
+.orange-dark {
+	background-color: #F57C00 !important;
+	color: white;
+}
+.orange-accent {
+	background-color: #FF9800 !important;
+	color: white;
+}
+.orange-text {
+	color: #FF9800 !important;
+}
+
+/*Grey*/
+.grey {
+	background-color: #9E9E9E !important;
+	color: white;
+}
+.grey-dark {
+	background-color: #616161 !important;
+	color: white;
+}
+.grey-accent {
+	background-color: #607D8B !important;
+	color: white;
+}
+
+/*White*/
+.white {
+	background-color: #FFFFFF !important;
+	color: #333;
+}
+.white-dark {
+	background-color: #DADADA !important;
+	color: #333;
+}
+.white-accent {
+	background-color: transparent !important;
+	color: #333;
+}
+.white-text {
+	color: #FFFFFF !important;
+}
+
+.red a, .red-dark a, .red-accent a,
+.pink a, .pink-dark a, .pink-accent a,
+.purple a, .purple-dark a, .purple-accent a,
+.indigo a, .indigo-dark a, .indigo-accent a,
+.blue a, .blue-dark a, .blue-accent a,
+.green a, .green-dark a, .green-accent a,
+.orange a, .orange-dark a, .orange-accent a,
+.grey a, .grey-dark a, .grey-accent a {
+	color: white;
+}

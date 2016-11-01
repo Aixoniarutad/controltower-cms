@@ -1,0 +1,48 @@
+<!-- View Toolbar -->
+<section id="view-toolbar">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button class="md-accent md-icon-button" ui-sref="^.list">
+                <md-icon>arrow_back</md-icon>
+            </md-button>
+            <h2>{{Page.meta.title}}</h2>
+            <span flex></span>
+            <md-button class="md-accent" ng-click="newModule($event)">
+                <md-icon>add</md-icon>
+                <span>Add Module</span>
+            </md-button>
+        </div>
+    </md-toolbar>
+</section>
+
+<!-- View -->
+<section id="view-content" layout="column" layout-margin>
+    <form id="sortable-modules" class="md-whiteframe-5dp">
+        <ul ng-sortable="sortModules" layout="column">
+            <li ng-repeat="Module in Page.modules | orderBy: 'order'">
+                <div ng-mouseenter="module_options = true"
+                     ng-mouseleave="module_options = false">
+                    <!-- Options -->
+                    <div layout="row" layout-align="center center" class="module-overlay">
+                        <div ng-show="module_options">
+                            <md-button class="md-icon-button" aria-label="Delete" ng-click="deleteModule(Page, Module)">
+                                <md-tooltip>delete</md-tooltip>
+                                <md-icon>delete</md-icon>
+                            </md-button>
+                            <md-button class="md-icon-button" aria-label="Copy" ng-click="copyModule(Page, Module)">
+                                <md-tooltip>copy</md-tooltip>
+                                <md-icon>content_copy</md-icon>
+                            </md-button>
+                            <md-button class="md-icon-button" aria-label="Edit" ng-click="editModule($event, Module)">
+                                <md-tooltip>edit</md-tooltip>
+                                <md-icon>mode_edit</md-icon>
+                            </md-button>
+                        </div>
+                    </div>
+                    <!-- Preview -->
+                    <div ng-inline template="_template/module/{{Module.type}}/template.html"></div>
+                </div>
+            </li>
+        </ul>
+    </form>
+</section>

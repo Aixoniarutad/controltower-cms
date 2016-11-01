@@ -1,0 +1,52 @@
+<div class="module-options">
+	<md-tabs md-dynamic-height>
+		<!-- Background Image -->
+		<md-tab>
+			<md-tab-label>
+				<md-icon>insert_photo</md-icon>
+			</md-tab-label>
+			<md-tab-body>
+				<div layout="column">
+					<div layout-wrap layout="row">
+						<div layout-margin ng-repeat="media in Media" ng-click="Module.style.background_image = media.publicUrl">
+							<img lazy-src ng-src="{{media.publicUrl}}" style="max-height: 100px" />
+						</div>
+					</div>
+				</div>
+			</md-tab-body>
+		</md-tab>
+		<!-- Text Alignment -->
+		<md-tab>
+			<md-tab-label>
+				<md-icon>format_align_center</md-icon>
+			</md-tab-label>
+			<md-tab-body>
+				<div layout="row">
+					<div ng-repeat="layout in Template.layout_align">
+						<md-button ng-click="Module.style.layout_align = layout.alignment" class="md-fab md-raised md-mini">
+							<md-icon ng-class="'md-light'">{{layout.icon}}</md-icon>
+						</md-button>
+					</div>
+				</div>
+			</md-tab-body>
+		</md-tab>
+		<!-- Content -->
+		<md-tab>
+			<md-tab-label>
+				<md-icon>title</md-icon>
+			</md-tab-label>
+			<md-tab-body>
+				<md-content layout="column" layout-gt-xs="row" layout-padding>
+					<md-input-container flex="30">
+						<label>Title</label>
+						<input ng-model="Module.data.title" type="text">
+					</md-input-container>
+					<md-input-container flex="70">
+						<label>Subtitle</label>
+						<input ng-model="Module.data.subtitle" type="text">
+					</md-input-container>
+				</md-content>
+			</md-tab-body>
+		</md-tab>
+	</md-tabs>
+</div>

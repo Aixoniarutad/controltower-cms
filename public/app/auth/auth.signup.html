@@ -1,0 +1,36 @@
+<div id="signup-form-container" layout="row" layout-align="center center">
+    <form id="signup-form" 
+          class="md-whiteframe-5dp" 
+          layout="column" 
+          flex="90"
+          flex-gt-sm="60"
+          flex-gt-md="40" 
+          ng-submit="signup(user)">
+        <div class="form-heading">
+            <h1>Sign Up</h1>
+            <span>Have an account? <a ui-sref="^.login">login</a> now.</span>
+        </div>
+        <div class="user-input" layout="row" layout-wrap layout-padding>
+            <div flex="50" layout="column">
+                <input type="text" placeholder="First Name" ng-model="user.first_name" required autofocus>
+            </div>
+            <div flex="50" layout="column">
+                <input type="text" placeholder="Last Name" ng-model="user.last_name" required>
+            </div>
+            <div flex="50" layout="column">
+                <input type="email" placeholder="Email Address" ng-model="user.username" required>
+            </div>
+            <div flex="50" layout="column">
+                <input type="password" placeholder="Password" ng-model="user.password" required>
+            </div>
+        </div>
+        <div class="signup-form-controls" layout="row">
+            <div layout="column" flex="70" flex-offset="15" layout-padding>
+                <div class="policy">By clicking below to sign up, you are agreeing to the ControlTower Terms of Services and Privacy Policy.</div>
+                <div>
+                    <button type="submit" class="form-submit">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

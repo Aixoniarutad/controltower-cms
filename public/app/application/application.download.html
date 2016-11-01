@@ -1,0 +1,21 @@
+<md-dialog aria-label="Download Application" style="width:500px">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<h2>Download Application</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="cancel()">
+				<md-icon aria-label="Close dialog">close</md-icon>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<md-dialog-content>
+		<md-content class="md-padding">
+			<span>Download zipfile?</span>
+		</md-content>
+	</md-dialog-content>
+	<!-- Actions -->
+	<md-dialog-actions layout="row">
+		<md-button ng-click="cancel()">Go Back</md-button>
+		<md-button href="{{zipfileMediaLink}}" target="_blank">Download</md-button>
+	</md-dialog-actions>
+</md-dialog>

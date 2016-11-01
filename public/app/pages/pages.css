@@ -1,0 +1,72 @@
+/*Pages*/
+.page-card {
+    width: 350px;
+}
+.page-card .header {
+    padding: 10px 5px 0px 15px;
+}
+.page-card .title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .005em;
+}
+.page-card .subtitle { 
+    color: rgb(119, 119, 119);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .010em;
+    line-height: 20px;
+}
+.page-card .thumbnail {
+    height:250px;
+}
+.page-card.ng-enter {
+    opacity: 0.2;
+    padding-left: 30px;
+    transition: all ease 250ms;
+}
+.page-card.ng-enter-stagger {
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+}
+.page-card.ng-enter-active {
+    opacity: 1.0;
+    padding-left: 0px;
+}
+.frame-wrap {
+    width: 320px;
+    height: 242px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(204, 204, 204, 0.58);
+    border-radius: 2px;
+}
+.frame-preview {
+    width: 1280px;
+    height: 968px;
+    background-color: #EEEEEE;
+    border: 0;
+    -ms-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+/* New Page */
+#pages-new-form {
+    width: 500px;
+}
+
+/* Sortable */
+.sortable-page {
+    border: 2px dashed #3E4649;
+}

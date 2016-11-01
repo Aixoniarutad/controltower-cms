@@ -1,0 +1,22 @@
+<section layout="column" class="module-footer <%= Module.style.background_color %>">
+	<div layout="column" flex="85" flex-offset="5" class="module-footer-top">
+		<!-- Social -->
+		<div layout="row" class="module-footer-social">
+			<% Module.data.social.forEach(function(social){ %>
+				<a href="http://www.<%= social.type %>.com">
+					<img ng-src="http://storage.googleapis.com/controltower-files-release/assets/images/social/<%= social.type %>/<%= social.type %>_36.png" alt="<%= social.type %>">
+				</a>
+			<% }); %>
+		</div>
+		<!-- Links -->
+		<div layout="column" layout-gt-xs="row" class="module-footer-links">
+			<% Application.pages.forEach(function(page){ %>
+				<a href="<%= page.meta.filename %>"><%= page.meta.title %></a>
+			<% }); %>
+		</div>
+	</div>
+	<!-- Copyright -->
+	<div layout="row" class="module-footer-bottom <%= Module.style.background_color %>-dark">
+		<span flex="85" flex-offset="5"><%= Module.data.copyright %></span>
+	</div>
+</section>

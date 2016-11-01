@@ -1,0 +1,40 @@
+<div id="initialize-form-container" layout="row" layout-align="center center">
+    <form id="initialize-form" 
+          class="md-whiteframe-5dp" 
+          layout="column" 
+          flex="90"
+          flex-gt-sm="60"
+          flex-gt-md="40" 
+          ng-submit="initialize(application)">
+        <div class="form-heading">
+            <h1>Get Started</h1>
+            <span>Setup your business.</span>
+        </div>
+        <div class="user-input" layout="row" layout-wrap layout-padding>
+            <div flex="100" layout="column">
+                <input type="text" placeholder="Business Name" ng-model="application.meta.title" required autofocus>
+            </div>
+            <div flex="50" layout="column">
+                <input type="text" placeholder="Telephone" ng-model="application.meta.telephone">
+            </div>
+            <div flex="50" layout="column">
+                <input type="text" placeholder="City" ng-model="application.meta.city">
+            </div>
+            <div flex="50" layout="column">
+                <input type="text" placeholder="State" ng-model="application.meta.state">
+            </div>
+            <div flex="50" layout="column">
+                <input type="text" placeholder="Zipcode" ng-model="application.meta.zipcode">
+            </div>
+        </div>
+        <div class="initialize-form-controls" layout="row" layout-align="end center" layout-padding>
+            <div layout="row">
+                <span flex></span>
+                <button type="submit" class="form-submit">
+                    <span>Next</span>
+                    <md-icon class="white-text">arrow_forward</md-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

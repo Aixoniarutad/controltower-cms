@@ -1,0 +1,21 @@
+<section layout="column" class="module-footer {{Module.style.background_color}}">
+
+	<div layout="column" flex="85" flex-offset="5" class="module-footer-content">
+		<!-- Social -->
+		<div layout="row" layout-gt-xs="row" class="module-footer-social">
+			<a ng-repeat="social in Module.data.social">
+				<img ng-src="http://storage.googleapis.com/controltower-files-release/assets/images/social/{{social.type}}/{{social.type}}_36.png" alt="{{social.type}}">
+			</a>
+		</div>
+		<!-- Links -->
+		<div layout="column" layout-gt-xs="row" class="module-footer-links">
+			<div ng-repeat="page in Application.pages">
+				<a href="">{{page.meta.title}}</a>
+			</div>
+		</div>
+        <!-- Copyright -->
+        <div layout="row" layout-gt-xs="row" class="module-footer-copyright {{Module.style.background_color}}-dark">
+            <div>{{Module.data.copyright}}</div>
+        </div>
+	</div>
+</section>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ControlTower">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="<%= Page.meta.description %>">
+        <meta name="keywords" content="<%= Page.meta.keywords %>">
+        <meta name="author" content="<%= Page.meta.author %>">
+        <link rel="icon" href="favicon.ico">
+        <title><%= Page.meta.title %></title>
+        <!-- Angular & Angular Material -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="http://storage.googleapis.com/controltower-files-release/bower_components/angular-material/angular-material.min.css">
+        <script src="http://storage.googleapis.com/controltower-files-release/bower_components/angular/angular.min.js"></script>
+        <script src="http://storage.googleapis.com/controltower-files-release/bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="http://storage.googleapis.com/controltower-files-release/bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="http://storage.googleapis.com/controltower-files-release/bower_components/angular-messages/angular-messages.min.js"></script>
+        <script src="http://storage.googleapis.com/controltower-files-release/bower_components/angular-material/angular-material.min.js"></script>
+        <script src="http://storage.googleapis.com/controltower-files-release/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <!-- Page Specific -->
+        <link rel="stylesheet" href="http://storage.googleapis.com/controltower-files-release/assets/css/style.css">
+        <link rel="stylesheet" href="http://storage.googleapis.com/controltower-files-release/assets/css/color.css">
+        <!-- Modules Specific -->
+        <link rel="stylesheet" href="http://storage.googleapis.com/controltower-files-release/_template/module/header/style.css">
+        <link rel="stylesheet" href="http://storage.googleapis.com/controltower-files-release/_template/module/footer/style.css">
+        <link rel="stylesheet" href="http://storage.googleapis.com/controltower-files-release/_template/module/splash/style.css">
+        <link rel="stylesheet" href="http://storage.googleapis.com/controltower-files-release/_template/module/text/style.css">
+        <link rel="stylesheet" href="http://storage.googleapis.com/controltower-files-release/_template/module/contact/style.css">
+    </head>
+    <body>
+
+        <!-- Modules -->
+        <% Page.modules.forEach(function(Module){ %>
+        <tower-<%= Module.type %> id="<%= Module._id %>" ng-cloak>
+            <%- include('./../module/'+Module.type+'/template.ejs', {Module: Module}); %>
+        </tower-<%= Module.type %>>
+        <% }); %>
+
+        <!-- App -->
+        <script src="http://storage.googleapis.com/controltower-files-release/app/app.js"></script>
+    </body>
+</html>

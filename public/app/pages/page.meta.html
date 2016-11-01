@@ -1,0 +1,36 @@
+<md-dialog aria-label="Page Settings" style="width:500px">
+  	<form ng-submit="updatePage(Page)">
+	    <md-toolbar>
+	      	<div class="md-toolbar-tools">
+	        	<h2>Page Settings</h2>
+	        	<span flex></span>
+	        	<md-button class="md-icon-button" ng-click="cancel()">
+	          		<md-icon aria-label="Close dialog">close</md-icon>
+	        	</md-button>
+	      	</div>
+	    </md-toolbar>
+
+	    <md-dialog-content>
+			<md-content class="md-padding">
+				<md-input-container class="md-block">
+				    <label>Page Title</label>
+				    <input ng-model="Page.meta.title" />
+				</md-input-container>
+				<md-input-container class="md-block">
+				    <label>Page Description</label>
+				    <input md-maxlength="155" ng-model="Page.meta.description" />
+				</md-input-container>
+				<md-input-container class="md-block">
+				    <label style="color:rgba(0,0,0,0.54)">Page Keywords</label>
+				    <md-chips ng-if="Page.meta.keywords" ng-model="Page.meta.keywords"></md-chips>
+				</md-input-container>
+            </md-content>
+	    </md-dialog-content>
+
+	    <!-- Actions -->
+	    <md-dialog-actions layout="row">
+	      	<md-button ng-click="cancel()">Go Back</md-button>
+	      	<md-button type="submit">Confirm</md-button>
+	    </md-dialog-actions>
+  	</form>
+</md-dialog>

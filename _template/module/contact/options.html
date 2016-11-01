@@ -1,0 +1,44 @@
+<div class="module-options">
+	<md-tabs md-dynamic-height>
+		<!-- Form Title -->
+		<md-tab>
+			<md-tab-label>
+				<md-icon>title</md-icon>
+			</md-tab-label>
+			<md-tab-body>
+				<md-content layout-gt-sm="row" layout-padding>
+					<div>
+					  <md-input-container>
+						<label>Title</label>
+						<input ng-model="Module.data.title" type="text">
+					  </md-input-container>
+					</div>
+				</md-content>
+			</md-tab-body>
+		</md-tab>
+		<!-- Location -->
+		<md-tab>
+			<md-tab-label>
+				<md-icon>location_on</md-icon>
+			</md-tab-label>
+			<md-tab-body>
+				<md-content layout="row" layout-padding>
+					<md-input-container>
+						<label>Address</label>
+						<input ng-model="Module.data.address" type="text">
+					</md-input-container>
+					<md-input-container>
+						<label>City</label>
+						<input ng-model="Module.data.city" type="text">
+					</md-input-container>
+					<md-input-container>
+						<label>State</label>
+						<md-select ng-model="Module.data.state">
+							<md-option ng-repeat="state in Template.states" value="{{state.abbreviation}}">{{state.name}}</md-option>
+						</md-select>
+					</md-input-container>
+				</md-content>
+			</md-tab-body>
+		</md-tab>
+	</md-tabs>
+</div>

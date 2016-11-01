@@ -1,0 +1,37 @@
+.module-editor {
+	background: transparent !important;
+	box-shadow: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+.module-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 9;
+	-moz-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	-webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+.module-overlay:hover {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+.module-overlay button md-icon {
+	color: #F7F7F7;
+}
+#sortable-modules ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+#sortable-modules ul li {
+	position: relative;
+	cursor: move;
+}

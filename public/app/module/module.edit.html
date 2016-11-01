@@ -1,0 +1,23 @@
+<md-dialog class="module-editor" layout="column" aria-label="Edit Module">
+	<!-- Actions -->
+	<md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button class="md-accent md-icon-button" ng-click="hide()">
+                <md-icon>arrow_back</md-icon>
+            </md-button>
+            <h2>Back</h2>
+            <span flex></span>
+            <md-button class="md-accent" ng-click="updateModule(Page, Module)">
+                <md-icon>save</md-icon>
+                <span>Save</span>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+	<div layout="column">
+		<!-- Preview -->
+		<div ng-inline template="_template/module/{{Module.type}}/template.html"></div>
+		<!-- Options -->
+		<div ng-inline template="_template/module/{{Module.type}}/options.html"></div>
+	</div>
+</md-dialog>

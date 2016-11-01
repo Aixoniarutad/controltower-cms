@@ -1,0 +1,76 @@
+<!-- Toolbar -->
+<div id="menu-left" class="md-whiteframe-3dp" layout="column">
+	<div class="brand" layout="row" layout-align="center center" ng-click="finishTutorial()">
+		<brand-loader></brand-loader>
+	</div>
+	<!-- Application -->
+	<div class="activity" ng-class="{'current': step==0}">
+		<a layout="column" ng-click="next(0)">
+			<md-icon>web</md-icon>
+			<div ng-show="step==0">Website</div>
+		</a>
+		<md-toast class="md-tutorial-toast-theme" ng-class="{'ng-hide bounce': step!==0}">
+			<div class="md-toast-content">
+				<div>Preview or publish your application.</div>
+				<span flex></span>
+				<md-button class="md-action" ng-click="next(1)">Next</md-button>
+			</div>
+		</md-toast>
+	</div>
+	<!-- Pages -->
+	<div class="activity" ng-class="{'current': step==1}">
+		<a layout="column" ng-click="next(1)">
+			<md-icon>pages</md-icon>
+			<div ng-show="step==1">Pages</div>
+		</a>
+		<md-toast class="md-tutorial-toast-theme" ng-class="{'ng-hide bounce': step!==1}">
+			<div class="md-toast-content">
+				<div>Add, update, and delete pages.</div>
+				<span flex></span>
+				<md-button class="md-action" ng-click="next(2)">Next</md-button>
+			</div>
+		</md-toast>
+	</div>
+	<!-- Users -->
+	<div class="activity" ng-class="{'current': step==2}">
+		<a layout="column" ng-click="next(2)">
+			<md-icon>account_box</md-icon>
+			<div ng-show="step==2">Users</div>
+		</a>
+		<md-toast class="md-tutorial-toast-theme" ng-class="{'ng-hide bounce': step!==2}">
+			<div class="md-toast-content">
+				<div>Create users and edit permissions.</div>
+				<span flex></span>
+				<md-button class="md-action" ng-click="next(3)">Next</md-button>
+			</div>
+		</md-toast>
+	</div>
+	<!-- Media -->
+	<div class="activity" ng-class="{'current': step==3}">
+		<a layout="column" ng-click="next(3)">
+			<md-icon>perm_media</md-icon>
+			<div ng-show="step==3">Media</div>
+		</a>
+		<md-toast class="md-tutorial-toast-theme" ng-class="{'ng-hide bounce': step!==3}">
+			<div class="md-toast-content">
+				<div>Upload media files.</div>
+				<span flex></span>
+				<md-button class="md-action" ng-click="next(4)">Next</md-button>
+			</div>
+		</md-toast>
+	</div>
+	<!-- Logout -->
+	<span flex></span>
+	<div class="activity" ng-class="{'current': step==4}">
+		<a ng-click="next(4)">
+			<md-icon>exit_to_app</md-icon>
+		</a>
+		<md-toast class="md-tutorial-toast-theme" ng-class="{'ng-hide bounce': step!==4}">
+			<div class="md-toast-content">
+				<div>Logout of your current session.</div>
+				<span flex></span>
+				<md-button class="md-action" ng-click="next(5)">Next</md-button>
+			</div>
+		</md-toast>
+	</div>
+</div>
